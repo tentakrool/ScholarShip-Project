@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bk_name: MyString
+  size: MyString
+  brand: MyString
+  product_id: 1
+  mrp: 1
+  colour: MyString
+  stock: 1
+  discount: 1
+  bk_description: MyText
+  bk_id: MyText
+  cart_unit: 1
+
+two:
+  bk_name: MyString
+  size: MyString
+  brand: MyString
+  product_id: 1
+  mrp: 1
+  colour: MyString
+  stock: 1
+  discount: 1
+  bk_description: MyText
+  bk_id: MyText
+  cart_unit: 1

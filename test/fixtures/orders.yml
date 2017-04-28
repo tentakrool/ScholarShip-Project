@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_id: 1
+  order_date: 2017-04-28
+  shipping_date: 2017-04-28
+  payment_date: 2017-04-28
+  bk_id: 1
+  bk_name: MyString
+  ntbk_id: 1
+  ntbk_name: MyString
+  bk_cart: 1
+  book_cart: 1
+  ntbk_cart: 1
+  ntbk_mrp: 1
+  bk_mrp: 1
+  book_mrp: 1
+  book_name: MyString
+  book_id: 1
+
+two:
+  order_id: 1
+  order_date: 2017-04-28
+  shipping_date: 2017-04-28
+  payment_date: 2017-04-28
+  bk_id: 1
+  bk_name: MyString
+  ntbk_id: 1
+  ntbk_name: MyString
+  bk_cart: 1
+  book_cart: 1
+  ntbk_cart: 1
+  ntbk_mrp: 1
+  bk_mrp: 1
+  book_mrp: 1
+  book_name: MyString
+  book_id: 1

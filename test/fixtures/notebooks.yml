@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ntbk_id: 1
+  pages: 1
+  ntbk_description: MyText
+  ntbk_name: MyString
+  brand: MyString
+  product_id: 1
+  colour: MyText
+  stock: 1
+  mrp: 1
+  cart_unit: 1
+  discount: 1
+
+two:
+  ntbk_id: 1
+  pages: 1
+  ntbk_description: MyText
+  ntbk_name: MyString
+  brand: MyString
+  product_id: 1
+  colour: MyText
+  stock: 1
+  mrp: 1
+  cart_unit: 1
+  discount: 1
