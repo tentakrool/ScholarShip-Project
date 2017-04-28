@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>ScholarShip Home</title>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<% content_for:stylesheets do %>
+  			<%= stylesheet_link_tag "homepage.css" %>
+  		<%end%>
+	</head>
+
+	<header class="navbar navbar-fixed-top navbar-inverse">
+		<!--div class="jumbotron">
+			<div class="conatiner-fluid text-center">
+			   	<h2>The ScholarShip</h2>      
+			</div>
+		</div-->
+
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand">ScholarShip</a>
+			</div>
+			<nav>
+				<ul class="nav navbar-nav navbar-right">
+
+					<li><%= link_to "Contact Us",'/contactus', :method => :get %> </li> 
+					<li><%= link_to "About Us", '/aboutus', :method => :get %></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<body>
+		<div class="container-fluid">   
+		  	<div class="row">
+		    	<div class="col-sm-6">
+		    		<div class="panel panel-success">
+				    	<div class="panel-heading">Panel with panel-success class</div>
+				    	<div class="panel-body"><%= link_to "Log In", 'users/sign_in', :method => :get %></div>
+				    </div>
+		    	</div>
+		    	<div class="col-sm-6">
+		    		 <div class="panel panel-info">
+				      	<div class="panel-heading">Panel with panel-info class</div>
+				      	<div class="panel-body"><%= link_to "Sign Up", 'users/sign_up', :method => :get %></div>
+				    </div>
+				</div>
+		    </div>
+		    <% if user_signed_in? %>
+		    	<div class="col-sm-6">
+		    		<div class="panel panel-success">
+				    	<div class="panel-heading">Panel with panel-success class</div>
+				    	<div class="panel-body"><%= link_to "Books", '/books', :method => :get %></div>
+				    </div>
+		    	</div>
+		    	<div class="col-sm-6">
+		    		 <div class="panel panel-info">
+				      	<div class="panel-heading">Panel with panel-info class</div>
+				      	<div class="panel-body"><%= link_to "Accessories", '/accessories', :method => :get %></div>
+				    </div>
+				</div>
+			<% end %>
+		</div>
+	</body>
+	<footer class=" container-fluid text-right">
+				<p>Copyright &copy; The ScholarShip </p>
+	</footer>
+</html>

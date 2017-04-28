@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>ScholarShip Home</title>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<% content_for:stylesheets do %>
+  			<%= stylesheet_link_tag "contactus.css" %>
+  		<%end%>
+	</head>
+
+	<header class="navbar navbar-fixed-top navbar-inverse">
+		<!--div class="jumbotron">
+			<div class="conatiner text-center">
+			   	<h2>The ScholarShip</h2>      
+			</div>
+		</div-->
+
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand">ScholarShip</a>
+			</div>
+			<nav>
+				<ul class="nav navbar-nav navbar-right">
+					<li><%= link_to "About Us",'/aboutus', :method => :get %> </li> 
+					<li><%= link_to "Home", '/homepage', :method => :get %></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<body>
+		<div class= "container-fluid">
+		<div class="row">
+			<div class="col-sm-offset-4 col-sm-4 about">
+				Email : blahblahblah@example.com
+			</div>
+		</div>
+		</div>
+	</body>
+	<footer class=" container-fluid text-right">
+				<p>Copyright &copy; The ScholarShip </p>
+	</footer>
+</html>
