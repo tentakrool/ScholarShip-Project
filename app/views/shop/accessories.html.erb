@@ -1,2 +1,207 @@
-<h1>Shop#accessories</h1>
-<p>Find me in app/views/shop/accessories.html.erb</p>
+<html>
+<head>
+    <% content_for:stylesheets do %>
+  			<%= stylesheet_link_tag "shop.css" %>
+  	<%end%>
+</head>
+<header>
+	<!-- Navigation -->
+   <header class="navbar navbar-fixed-top navbar-inverse">
+	    <div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand">ScholarShip</a>
+				</div>
+				<nav>
+					<ul class="nav navbar-nav navbar-right">
+						<li><%= link_to "About Us", '/aboutus', :method => :get %></li>
+						<li><%= link_to "Contact Us",'/contactus', :method => :get %> </li> 
+						<li><%= link_to "Home", '/homepage', :method => :get %></li>
+						<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li> 
+					</ul>
+				</nav>
+		</div>
+	
+</header>
+
+<body>
+    <!-- Page Content -->
+    <div class="container-fluid">
+            <div class="">
+                <div class="row">
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                    	<% @thriller.each do|book|%>
+							<div class="thumbnail">
+	                            <img src="http://placehold.it/320x150" alt="">
+	                            <div class="caption">
+	                                <h4 class="pull-right"><%=book.mrp%></h4>
+	                                <h4><a href="#"><%=book.book_name%></a>
+	                                </h4>
+	                            </div>
+								<p>No. of pages:<%=book.pages%></p>
+								<br>
+								<p>In stock:<%=book.stock %></p>
+								<br>
+								<p>Synopsis:<%=book.synopsis %></p>
+								<br>
+								<p>Author:<%=book.author %></p>
+								<br>
+								<p>Publisher:<%=book.publisher %></p>
+								<br>
+								<p>Genre:<%=book.genre_name%></p>
+								<br>
+								<br>
+								 <div class="ratings">
+	                                <p>
+	                                    <span class="glyphicon glyphicon-star"></span>
+	                                    <span class="glyphicon glyphicon-star"></span>
+	                                    <span class="glyphicon glyphicon-star"></span>
+	                                    <span class="glyphicon glyphicon-star"></span>
+	                                </p>
+	                            </div>
+                       		</div>
+						<% end %>
+					</div>
+               
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                    	<% @classic.each do|book|%>
+							<div class="thumbnail">
+	                            <img src="http://placehold.it/320x150" alt="">
+	                            <div class="caption">
+	                                <h4 class="pull-right"><%=book.mrp%></h4>
+	                                <h4><a href="#"><%=book.book_name%></a>
+	                                </h4>
+	                            </div>
+								<p>No. of pages:<%=book.pages%></p>
+								<br>
+								<p>In stock:<%=book.stock %></p>
+								<br>
+								<p>Synopsis:<%=book.synopsis %></p>
+								<br>
+								<p>Author:<%=book.author %></p>
+								<br>
+								<p>Publisher:<%=book.publisher %></p>
+								<br>
+								<p>Genre:<%=book.genre_name%></p>
+								<br>
+								<br>
+								 <div class="ratings">
+	                                <p>
+	                                    <span class="glyphicon glyphicon-star"></span>
+	                                    <span class="glyphicon glyphicon-star"></span>
+	                                    <span class="glyphicon glyphicon-star"></span>
+	                                    <span class="glyphicon glyphicon-star"></span>
+	                                </p>
+	                            </div>
+                       		</div>
+						<% end %>
+					</div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                    	<% @romance.each do|book|%>
+							<div class="thumbnail">
+	                            <img src="http://placehold.it/320x150" alt="">
+	                            <div class="caption">
+	                                <h4 class="pull-right"><%=book.mrp%></h4>
+	                                <h4><a href="#"><%=book.book_name%></a>
+	                                </h4>
+	                            </div>
+								<p>No. of pages:<%=book.pages%></p>
+								<br>
+								<p>In stock:<%=book.stock %></p>
+								<br>
+								<p>Synopsis:<%=book.synopsis %></p>
+								<br>
+								<p>Author:<%=book.author %></p>
+								<br>
+								<p>Publisher:<%=book.publisher %></p>
+								<br>
+								<p>Genre:<%=book.genre_name%></p>
+								<br>
+								<br>
+								 <div class="ratings">
+	                                <p>
+	                                    <span class="glyphicon glyphicon-star"></span>
+	                                    <span class="glyphicon glyphicon-star"></span>
+	                                    <span class="glyphicon glyphicon-star"></span>
+	                                    <span class="glyphicon glyphicon-star"></span>
+	                                </p>
+	                            </div>
+                       		</div>
+						<% end %>
+					</div>
+				</div>
+				<div class="row">
+		            <div class="col-sm-4 col-lg-4 col-md-4">
+		              	<% @selfhelp.each do|book|%>
+							<div class="thumbnail">
+			                    <img src="http://placehold.it/320x150" alt="">
+			    	            <div class="caption">
+			                        <h4 class="pull-right"><%=book.mrp%></h4>
+			        	            <h4><a href="#"><%=book.book_name%></a></h4>
+			                    </div>
+								<p>No. of pages:<%=book.pages%></p>
+								<br>
+								<p>In stock:<%=book.stock %></p>
+								<br>
+								<p>Synopsis:<%=book.synopsis %></p>
+								<br>
+								<p>Author:<%=book.author %></p>
+								<br>
+								<p>Publisher:<%=book.publisher %></p>
+								<br>
+								<p>Genre:<%=book.genre_name%></p>
+								<br>
+								<br>
+								<div class="ratings">
+			                        <p>
+			                            <span class="glyphicon glyphicon-star"></span>
+			                            <span class="glyphicon glyphicon-star"></span>
+			                            <span class="glyphicon glyphicon-star"></span>
+			                            <span class="glyphicon glyphicon-star"></span>
+			                        </p>
+			                    </div>
+		                	</div>
+						<% end %>
+					</div>
+					<div class="col-sm-4 col-lg-4 col-md-4">
+		              	<% @autob.each do|book|%>
+							<div class="thumbnail">
+			                    <img src="http://placehold.it/320x150" alt="">
+			    	            <div class="caption">
+			                        <h4 class="pull-right"><%=book.mrp%></h4>
+			        	            <h4><a href="#"><%=book.book_name%></a></h4>
+			                    </div>
+								<p>No. of pages:<%=book.pages%></p>
+								<br>
+								<p>In stock:<%=book.stock %></p>
+								<br>
+								<p>Synopsis:<%=book.synopsis %></p>
+								<br>
+								<p>Author:<%=book.author %></p>
+								<br>
+								<p>Publisher:<%=book.publisher %></p>
+								<br>
+								<p>Genre:<%=book.genre_name%></p>
+								<br>
+								<br>
+								<div class="ratings">
+			                        <p>
+			                            <span class="glyphicon glyphicon-star"></span>
+			                            <span class="glyphicon glyphicon-star"></span>
+			                            <span class="glyphicon glyphicon-star"></span>
+			                            <span class="glyphicon glyphicon-star"></span>
+			                        </p>
+			                    </div>
+		                	</div>
+						<% end %>
+					</div>
+			</div>
+	</div>
+
+	
+</body>
+<footer class="container-fluid text-right">
+    	<p>Copyright &copy; The ScholarShip </p>
+	</footer>
+</html>
