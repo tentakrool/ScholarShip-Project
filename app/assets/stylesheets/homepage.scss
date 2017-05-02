@@ -14,10 +14,8 @@ li:hover
 
 body 
 {
-  padding-top: 10%;
-  background-image: url('/assets/book1.jpeg');
-  background-repeat:no-repeat;
-  background-size:cover;
+  padding-bottom: 2%;
+  background-color:#b3fff0;
 }
 
 .center 
@@ -28,16 +26,6 @@ body
 .center h1 
 {
   margin-bottom: 10px;
-}
-
-.jumbotron
-{
-  width:100%;
-  background-color: #f8921e;
-  top:0;
-  padding:20px;
-  height:120px;
-  margin-bottom:0;
 }
 
 .row

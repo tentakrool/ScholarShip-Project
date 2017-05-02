@@ -9,14 +9,13 @@
    <header class="navbar navbar-fixed-top navbar-inverse">
 	    <div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand">ScholarShip</a>
+					<a class="navbar-brand">ScholarShip
 				</div>
 				<nav>
 					<ul class="nav navbar-nav navbar-right">
 						<li><%= link_to "About Us", '/aboutus', :method => :get %></li>
 						<li><%= link_to "Contact Us",'/contactus', :method => :get %> </li> 
 						<li><%= link_to "Home", '/homepage', :method => :get %></li>
-						<li><%= link_to "Accessories", '/accessories', :method => :get %></li>
 						<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li> 
 					</ul>
 				</nav>
@@ -26,16 +25,29 @@
 
 <body>
     <!-- Page Content -->
+    <div class="">
+    	<div class="container-fluid">
+            <div class="col-md-3">
+                <div class="sidenav">
+                   	<%= link_to "Accessories", '/accessories', :method => :get, class: "list-group-item"%>
+                    <%= link_to "Buy offline", '/accessories', :method => :get, class: "list-group-item"%>
+                   	<%= link_to "Write a review", '/accessories', :method => :get, class: "list-group-item"%>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container-fluid">
-            <div class="">
-                <div class="row">
+            <div class="row">
+                <div class="">
                     <div class="col-sm-4 col-lg-4 col-md-4">
                     	<% @thriller.each do|book|%>
 							<div class="thumbnail">
-	                            <img src="http://placehold.it/320x150" alt="">
+	                            <img src="/assets/books1.jpg" alt="">
 	                            <div class="caption">
 	                                <h4 class="pull-right"><%=book.mrp%></h4>
-	                                <h4><a href="#"><%=book.book_name%></a>
+	                                <h4>
+	                                <%=link_to book.book_name, shop_path(book.id)%>
 	                                </h4>
 	                            </div>
 								<p>No. of pages:<%=book.pages%></p>
@@ -59,6 +71,7 @@
 	                                    <span class="glyphicon glyphicon-star"></span>
 	                                </p>
 	                            </div>
+	                        <!--%= button_to 'Add to Cart', line_items_path(book_id: @thriller) %-->
                        		</div>
 						<% end %>
 					</div>
@@ -67,10 +80,10 @@
                     <div class="col-sm-4 col-lg-4 col-md-4">
                     	<% @classic.each do|book|%>
 							<div class="thumbnail">
-	                            <img src="http://placehold.it/320x150" alt="">
+	                            <img src="/assets/books1.jpg" alt="">
 	                            <div class="caption">
 	                                <h4 class="pull-right"><%=book.mrp%></h4>
-	                                <h4><a href="#"><%=book.book_name%></a>
+	                                <h4><%=link_to book.book_name, shop_path(book.id)%>
 	                                </h4>
 	                            </div>
 								<p>No. of pages:<%=book.pages%></p>
@@ -101,10 +114,10 @@
                     <div class="col-sm-4 col-lg-4 col-md-4">
                     	<% @romance.each do|book|%>
 							<div class="thumbnail">
-	                            <img src="http://placehold.it/320x150" alt="">
+	                            <img src="/assets/books1.jpg" alt="">
 	                            <div class="caption">
 	                                <h4 class="pull-right"><%=book.mrp%></h4>
-	                                <h4><a href="#"><%=book.book_name%></a>
+	                                <h4><%=link_to book.book_name, shop_path(book.id)%>
 	                                </h4>
 	                            </div>
 								<p>No. of pages:<%=book.pages%></p>
@@ -133,13 +146,13 @@
 					</div>
 				</div>
 				<div class="row">
-		            <div class="col-sm-4 col-lg-4 col-md-4">
+		            <div class="col-sm-offset-2 col-sm-4 col-lg-4 col-md-4">
 		              	<% @selfhelp.each do|book|%>
 							<div class="thumbnail">
-			                    <img src="http://placehold.it/320x150" alt="">
+			                    <img src="/assets/books1.jpg" alt="">
 			    	            <div class="caption">
 			                        <h4 class="pull-right"><%=book.mrp%></h4>
-			        	            <h4><a href="#"><%=book.book_name%></a></h4>
+			        	            <h4><%=link_to book.book_name, shop_path(book.id)%></h4>
 			                    </div>
 								<p>No. of pages:<%=book.pages%></p>
 								<br>
@@ -168,10 +181,10 @@
 					<div class="col-sm-4 col-lg-4 col-md-4">
 		              	<% @autob.each do|book|%>
 							<div class="thumbnail">
-			                    <img src="http://placehold.it/320x150" alt="">
+			                    <img src="/assets/books1.jpg" alt="">
 			    	            <div class="caption">
 			                        <h4 class="pull-right"><%=book.mrp%></h4>
-			        	            <h4><a href="#"><%=book.book_name%></a></h4>
+			        	            <h4><%=link_to book.book_name, shop_path(book.id)%></h4>
 			                    </div>
 								<p>No. of pages:<%=book.pages%></p>
 								<br>

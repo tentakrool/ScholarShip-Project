@@ -16,6 +16,7 @@
 						<li><%= link_to "About Us", '/aboutus', :method => :get %></li>
 						<li><%= link_to "Contact Us",'/contactus', :method => :get %> </li> 
 						<li><%= link_to "Home", '/homepage', :method => :get %></li>
+						<li><%= link_to "Books", '/books', :method => :get %></li>
 						<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li> 
 					</ul>
 				</nav>
@@ -31,7 +32,7 @@
                     <div class="col-sm-6 col-lg-6 col-md-6">
                     	<% @bkmk.each do|x|%>
 							<div class="thumbnail">
-	                            <img src="http://placehold.it/320x150" alt="">
+	                            <img src="/assets/Bookmark.jpg" alt="">
 	                            <div class="caption">
 	                                <h4 class="pull-right"><%=x.mrp%></h4>
 	                                <h4><a href="#"><%=x.bk_name%></a>
@@ -64,7 +65,7 @@
                     <div class="col-sm-6 col-lg-6 col-md-6">
                     	<% @ntbk.each do|x|%>
 							<div class="thumbnail">
-	                            <img src="http://placehold.it/320x150" alt="">
+	                            <img src="/assets/Notebook.png" alt="">
 	                            <div class="caption">
 	                                <h4 class="pull-right"><%=x.mrp%></h4>
 	                                <h4><a href="#"><%=x.ntbk_name%></a>

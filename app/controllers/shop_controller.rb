@@ -11,4 +11,8 @@ class ShopController < ApplicationController
     @selfhelp=Book.where(genre_id:4)
     @autob=Book.where(genre_id:5)
   end
+
+  def show
+  	@book=Book.find(params[:id])
+  end
 end
