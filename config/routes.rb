@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/accessories', to: 'shop#accessories'
   get '/books', to: 'shop#books'
   get '/show', to: 'shop#show'
+  get '/buyOffline', to: 'shop#buyOffline'
 
   resources :shop do 
     collection do 

@@ -15,4 +15,7 @@ class ShopController < ApplicationController
   def show
   	@book=Book.find(params[:id])
   end
+
+  def buyOffline
+  end
 end

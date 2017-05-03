@@ -16,7 +16,6 @@
 						<li><%= link_to "About Us", '/aboutus', :method => :get %></li>
 						<li><%= link_to "Contact Us",'/contactus', :method => :get %> </li> 
 						<li><%= link_to "Home", '/homepage', :method => :get %></li>
-						<li><%= link_to "Books", '/books', :method => :get %></li>
 						<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li> 
 					</ul>
 				</nav>
@@ -26,6 +25,17 @@
 
 <body>
     <!-- Page Content-->
+    <div class="row">
+    	<div class="container-fluid">
+            <div class="col-md-3">
+                <div class="sidenav">
+                   	<%= link_to "Books", '/books', :method => :get, class: "list-group-item"%>
+                    <%= link_to "Buy offline", '/buyOffline', :method => :get, class: "list-group-item"%>
+                   	<%= link_to "Write a review", '/accessories', :method => :get, class: "list-group-item"%>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid">
             <div class="">
                 <div class="row">

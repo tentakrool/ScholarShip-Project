@@ -29,7 +29,6 @@
                 <div class="sidenav">
                    	<%= link_to "Accessories", '/accessories', :method => :get, class: "list-group-item"%>
                    	<%= link_to "Books", '/books', :method => :get, class: "list-group-item"%>
-                    <%= link_to "Buy offline", '/accessories', :method => :get, class: "list-group-item"%>
                    	<%= link_to "Write a review", '/accessories', :method => :get, class: "list-group-item"%>
                 </div>
             </div>
@@ -38,20 +37,38 @@
     <div class="row">
     	<div class="container-fluid">
     		<div class="col-md-offset-4 col-md-5 dabba">
-				<h2>Name:</h2><p><%=@book.book_name%></p>
-				<br>
-				<h2>No. of pages:</h2><p><%=@book.pages%></p>
-				<br>
-				<h2>In stock:</h2><p><%=@book.stock %></p>
-				<br>
-				<h2>Synopsis:</h2><p><%=@book.synopsis %></p>
-				<br>
-				<h2>Author:</h2><p><%=@book.author %></p>
-				<br>
-				<h2>Publisher:</h2><p><%=@book.publisher %></p>
-				<br>
-				<h2>Genre:</h2><p><%=@book.genre_name%></p>
-				<br>
+				Hi, the listed items can be found at the following stores depending on your location.
+				<h2>Gurugram, Haryana</h2>
+				<h3>Om Book Shop</h3>
+				<p> Located in: Ambience Mall, Gurgaon</p>
+				<p>Address: Lane No. V-40, Ambience Island, Sector 24, Gurugram, Haryana 122010</p>
+				<p>Hours:11AM–10PM</p>
+
+				<h3>New Midland Book Shop</h3>
+				<p> Address: C102, Shopping Mall, Arjun Marg, DLF Phase 1, Gurugram, Haryana 122002<p>
+				<p>Phone: 0124 438 0599</p>
+				<p>Hours:10:30AM–8:30PM</p>
+
+				<h3>Notes R.K. Book Shop</h3>
+				<p>Address: Shop No.72 Back side Road Om Sweets, DLF Colony, Sector 14, Gurugram, Haryana 122001
+				<p>Phone: 097183 59357</p>
+				<p>Hours:Open 24 hours</p>
+
+				<h2>Chandigarh</h2>
+				<h3>Popular Book Store</h3>
+				<p> Address: SCF-5 & 6, Sector 22D, Chandigarh, 160022</p>
+				<p>Phone: 0172 277 1583</p>
+				<p>Hours:10AM–8:30PM</p>
+
+				<h3>Amit Book Depot</h3>
+				<p> Address: S.C.O. 210-211, Ground Floor, Sub. City Center, Sector 34-A, Chandigarh, 160022</p>
+				<p>Phone: 0172 266 5665</p>
+				<p>Hours:10AM–8:30PM</p>
+
+				<h3>Browser Library & Book Store</h3>
+				<p>Address: Sco-14/15, Madhya Marg, Sector 8C, Chandigarh, 160008</p>
+				<p>Phone: 0172 254 7340</p>
+				<p>Hours:10AM–7:30PM</p>
 			</div>
 		</div>
 	</div>
