@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 	get '/homepage', to: 'static_pages#homepage'
 	get '/aboutus', to: 'static_pages#aboutus'
   get '/contactus', to: 'static_pages#contactus'
+  get '/underconst', to: 'static_pages#under_const'
 
   get '/accessories', to: 'shop#accessories'
   get '/books', to: 'shop#books'

@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>ScholarShip Home</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<% content_for:stylesheets do %>
+  		<%= stylesheet_link_tag "homepage.css" %>
+  	<%end%>
+  	<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+</head>
+<header class="navbar navbar-fixed-top navbar-inverse">
+	<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand">ScholarShip</a>
+				</div>
+				<nav>
+					<ul class="nav navbar-nav navbar-right">
+						<li><%= link_to "About Us", '/aboutus', :method => :get %></li>
+						<li><%= link_to "Contact Us",'/contactus', :method => :get %> </li> 
+						<li><%= link_to "Home", '/homepage', :method => :get %></li>
+						<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li> 
+					</ul>
+				</nav>
+	</div>
+</header>
+<body>
+	<div class="text-center work">
+		This page is under construction. 
+		<br>
+		<br>
+		We apologise for your inconvenience.
+</body>
+<footer class=" container-fluid text-right">
+				<p>Copyright &copy; The ScholarShip </p>
+	</footer>
+</html>

@@ -7,4 +7,7 @@ class StaticPagesController < ApplicationController
 
   def contactus
   end
+
+  def under_const
+  end
 end
